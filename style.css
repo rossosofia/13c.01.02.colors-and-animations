@@ -1,0 +1,433 @@
+/* the first part is to apply a color palette, 
+the second part is to create a dark theme and 
+the last part is to add animations. */
+
+/* color palette */
+:root {
+  --color-lighter: #f3f4f5;
+  --color-light: #e4dea8;
+  --color-accent-1: #3e7aba;
+  --color-accent-2: #f15570;
+  --color-darker: #222221;
+}
+
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Fonts */
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Noto Serif Display", serif;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--color-darker);
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--color-darker);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-accent-2);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-accent-1);
+  color: var(--color-lighter);
+}
+
+.dark_button {
+  background-color: var(--color-accent-2);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 3rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: var(--color-lighter);
+  border-color: var(--color-lighter);
+  color: var(--color-darker);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-light);
+}
+
+nav a {
+  color: var(--color-darker);
+  text-decoration: none;
+}
+
+nav a.logo {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-accent-1);
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  padding: 5rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-light);
+}
+
+header p {
+  color: var(--color-darker);
+}
+
+header button {
+  margin-bottom: 3rem;
+}
+
+.header_text {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.header_graphics {
+  width: 25vw;
+  height: 25vw;
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 250px;
+  background-color: var(--color-accent-1);
+  margin-bottom: 1rem;
+  padding: 3rem;
+}
+
+.header_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+/* product section */
+#product {
+  padding: 5rem 3rem;
+  background-color: var(--color-light);
+}
+
+#product h2 {
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+}
+
+#product article {
+  display: flex;
+  min-height: 50vh;
+  padding: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#product article:first-child {
+  min-height: 40vh;
+}
+
+highlight.product_text {
+  width: 50vw;
+  min-width: 300px;
+}
+
+#product article:first-child .product_text,
+.product_text {
+  width: 75vw;
+  min-width: 300px;
+}
+
+.product_text {
+  width: 50vw;
+}
+
+.product_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  padding: 1rem;
+  margin: 3rem;
+  background-color: var(--color-light);
+  border-radius: 300px;
+}
+
+.product_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+/* highlight sections */
+.highlight {
+  display: flex;
+  min-height: 70vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-lighter);
+}
+
+.highlight div {
+  width: 80vw;
+}
+
+.highlight div a {
+  color: var(--color-accent-2);
+}
+
+.highlight div h2 {
+  font-size: 5.005rem;
+  line-height: 6rem;
+  color: var(--color-accent-1);
+}
+
+.dark {
+  background-color: var(--color-darker);
+}
+
+.dark h2 {
+  color: var(--color-lighter);
+}
+
+.dark a {
+  color: var(--color-lighter);
+}
+
+/* request section */
+#request {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-lighter);
+}
+
+#request div {
+  width: 50vw;
+  min-width: 300px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+}
+
+footer h2,
+footer h3 {
+  color: var(--color-lighter);
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: var(--color-lighter);
+}
+
+footer section.left {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.9em;
+  }
+
+  #product h2 {
+    font-size: 1.953rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .highlight div h2 {
+    font-size: 3.052rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-accent-1: #3e7aba;
+    --color-accent-2: #f15570;
+    --color-lighter: #f3f4f5;
+    --color-light: #e4dea8;
+    --color-dark: #595959;
+    --color-darker: #222221;
+  }
+
+  h1, h2, h3{
+    color: var(--color-light);
+  }
+
+  p {
+    color: var(--color-lighter);
+  }
+
+  a {
+    color: var(--color-accent-2);
+  }
+
+  /* UI Elements */
+  button {
+    background-color: var(--color-accent-1);
+    color: var(--color-lighter);
+  }
+
+  .dark_button {
+    background-color: var(--color-accent-2);
+  }
+
+  input[type="text"] {
+    background-color: var(--color-lighter);
+    border-color: var(--color-lighter);
+    color: var(--color-darker);
+  }
+
+  /* Menu */
+  nav {
+    background-color: var(--color-darker);
+  }
+
+  nav a {
+    color: var(--color-light);
+  }
+
+  nav a.logo {
+    color: var(--color-accent-2);
+  }
+
+  /* Header */
+  header {
+    background-color: var(--color-darker);
+  }
+
+  header p {
+    color: var(--color-lighter);
+  }
+
+  .header_graphics {
+    background-color: var(--color-darker);
+  }
+
+  /* product section */
+  #product {
+    background-color: var(--color-darker);
+  }
+  /* highlight sections */
+  .highlight {
+    background-color: var(--color-dark);
+  }
+
+  
+  .highlight div a {
+    color: var(--color-accent-2);
+  }
+
+  .highlight div h2 {
+    color: var(--color-light);
+  }
+
+  .dark {
+    background-color: var(--color-darker);
+  }
+
+  .dark h2 {
+    color: var(--color-lighter);
+  }
+
+  .dark a {
+    color: var(--color-lighter);
+  }
+
+  /* request section */
+  #request {
+    background-color: var(--color-dark);
+  }
+  /* Footer */
+  footer {
+    background-color: var(--color-darker);
+    color: var(--color-lighter);
+  }
+
+  footer h2,
+  footer h3 {
+    color: var(--color-lighter);
+  }
+
+  footer a {
+    color: var(--color-lighter);
+  }
+}
